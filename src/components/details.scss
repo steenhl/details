@@ -1,15 +1,21 @@
 .category-details {
+    max-width: 600px;
+    margin: 0 auto;
+
+    // skjul animationen når details er åben
+    &[open] &__arrow-down {
+        opacity: 0;
+    }
 
     &__summary {
         display: flex;
-        // border-bottom: 1px solid #333;
-        // border-top: 1px solid #333;
         padding: 17px 0;
         background-color: rgba(250, 216, 150, 0.516);
         cursor: pointer;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
     }
 
     &__content {
@@ -19,7 +25,21 @@
         position: relative;
     }
 
-    &__arrow-down {}
+    &__arrow-down {
+        animation-name: arrowAnimateY;
+        animation-duration: .5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-timing-function: ease-in
+    }
 
+    @keyframes arrowAnimateY {
+        0% {
+            transform: translateY(0);
+        }
 
+        100% {
+            transform: translateY(50%)
+        }
+    }
 }
