@@ -1,0 +1,25 @@
+.category-details {
+
+    &__summary {
+        display: flex;
+        // border-bottom: 1px solid #333;
+        // border-top: 1px solid #333;
+        padding: 17px 0;
+        background-color: rgba(250, 216, 150, 0.516);
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__content {
+        height: 0;
+        overflow: hidden;
+        transition: height .4s ease-in-out;
+        position: relative;
+    }
+
+    &__arrow-down {}
+
+
+}
